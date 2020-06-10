@@ -60,7 +60,7 @@ export default AboutPage
 
 export const query = graphql`
   query {
-    author: file(relativePath: { eq: "author.jpg" }) {
+    author: file(relativePath: { eq: "keys-about.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, maxHeight: 480, quality: 85) {
           ...GatsbyImageSharpFluid_withWebp

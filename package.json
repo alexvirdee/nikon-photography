@@ -1,8 +1,8 @@
 {
   "name": "gatsby-contentful-portfolio",
-  "description": "Portfolio theme for GatsbyJS",
+  "description": "Portfolio built with GatsbyJS",
   "version": "1.0.0",
-  "author": "Wojciech Kocjan <wojciech@kocjan.net>",
+  "author": "Alex Virdee",
   "dependencies": {
     "autoprefixer": "^9.7.6",
     "classnames": "^2.2.6",

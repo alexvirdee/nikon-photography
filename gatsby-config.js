@@ -16,9 +16,9 @@ module.exports = {
     ],
     links: {
       facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
+      instagram: "https://www.instagram.com/alexheartm5/",
       pinterest: "https://pinterest.com/",
-      twitter: "https://twitter.com/",
+      twitter: "https://twitter.com/alex_virdee",
     },
     locale: "en",
     title: `Alex Virdee`,
