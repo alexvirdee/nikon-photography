@@ -18,7 +18,7 @@ const AboutPage = ({ data }) => (
             </h1>
 
             <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-600 sm:text-2xl">
-              Miami based digital creator & photography enthusiast.
+              Miami based software developer & photography enthusiast.
             </h2>
             <div className="mt-4 leading-loose">
               Welcome to my photography website! I tend to travel quite often so I figured it would be a good idea to build a website that I can consistently add my favorite photographs that I take from my travels. Feel free to download & share 😎

@@ -40,7 +40,7 @@ const Footer = () => {
       </ul>
       <div className="mt-8 md:mt-0 md:order-1">
         <p className="text-center text-sm md:text-base text-gray-700">
-          Made with <span style={{color: 'red'}}>❤️</span> by <strong>Alex Virdee</strong>. &copy; {new Date().getFullYear()}
+          Made with <span role='img' aria-label='heart-emoji' style={{color: 'red'}}>❤️</span> by <strong>Alex Virdee</strong>. &copy; {new Date().getFullYear()}
         </p>
       </div>
     </div>
