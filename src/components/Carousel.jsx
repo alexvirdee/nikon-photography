@@ -18,7 +18,7 @@ export const Carousel = ({ images }) => {
     <Swiper {...swiperParams}>
       {images.map(image => {
         return (
-          <div key={`slide_${image.id}`}>
+          <div className='carousel' key={`slide_${image.id}`}>
             <Img
               fluid={image.localFile.childImageSharp.fluid}
               alt={image.title}

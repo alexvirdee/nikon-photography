@@ -14,6 +14,8 @@ module.exports = {
     menu: [
       { name: "Home", to: "/" },
       { name: "About", to: "/about" },
+      { name: "Portfolio", to: "http://www.alexvirdee.com/"  },
+      { name: "Blog", to: "https://alexvirdee-blog.netlify.app/" }
     ],
     links: {
       facebook: "https://www.facebook.com/",
