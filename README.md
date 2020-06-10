@@ -1,22 +1,9 @@
-# Portfolio theme for Gatsby
+# Gatsby
 
 ### Gatsby starter theme integrated with [Contentful](https://www.contentful.com)
 
-## Demo
+## Alex Virdee Personal Photography Website
 
-Live demo is available at:
-https://gatsby-contentful-portfolio.netlify.com/
-
-## Screenshot
-
-![The home page](screenshot.png?raw=true)
-
-## Who is this for?
-
-- Graphic designers
-- Photographers
-- Illustrators
-- Other creatives
 
 ## Features
 
