@@ -48,6 +48,15 @@ This project comes with a few handy commands for linting and code fixing. The mo
 
 Run in the project locally.
 
+#### `git pull`
+
+Get current state of project from contentful before pushing to gh-pages branch.
+
 #### `gatsby build`
 
 Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
+
+
+#### `npm run deploy`
+
+After adding new content with contentful run this command to reflect changes on gh-pages branch 
