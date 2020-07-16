@@ -56,7 +56,10 @@ Get current state of project from contentful before pushing to gh-pages branch.
 
 Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
 
-
 #### `npm run deploy`
 
-After adding new content with contentful run this command to reflect changes on gh-pages branch 
+After adding new content with contentful run this command to reflect changes on gh-pages branch
+
+If you are running into issues on gh-pages branch with images make sure to clean the .cache and public folder by running following command 
+
+### 'npm run clean'
