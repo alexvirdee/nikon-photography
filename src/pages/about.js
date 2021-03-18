@@ -21,7 +21,7 @@ const AboutPage = ({ data }) => (
               Miami based software developer & photography enthusiast.
             </h2>
             <div className="mt-4 leading-loose">
-              Welcome to my photography website! I tend to travel quite often so I figured it would be a good idea to build a website that I can consistently add my favorite photographs that I take from my travels. Feel free to download & share 😎
+              Welcome to my photography website! I tend to travel quite often so I figured it would be a good idea to build a website that I can consistently add my favorite photographs that I take from my travels. Feel free to download & share <span role="img" aria-label="sunglass-emoji">😎</span>
               <br />
               <br />
               <h2>My Gear:</h2>

@@ -8,6 +8,8 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
   )
 }
 
+process.env.GATSBY_CONCURRENT_DOWNLOAD = 1;
+
 module.exports = {
   pathPrefix: "/nikon-photography",
   siteMetadata: {

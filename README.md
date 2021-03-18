@@ -4,7 +4,6 @@
 
 ## Alex Virdee Personal Photography Website
 
-
 ## Features
 
 - Integration with [Contentful](https://www.contentful.com) - automated content model & demo setup
