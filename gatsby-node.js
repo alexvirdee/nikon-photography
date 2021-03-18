@@ -7,14 +7,14 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
     }
     type ContentfulPortfolio implements Node {
-      description: contentfulPortfolioDescriptionTextNode
-      gallery: [ContentfulAsset]
+      description: contentfulPortfolioDescriptionTextNode @link(by: "id", from: "description___NODE")
+      gallery: [ContentfulAsset] @link(by: "id", from: "gallery___NODE")
       id: ID!
       name: String!
-      related: [ContentfulPortfolio]
+      related: [ContentfulPortfolio] @link(by: "id", from: "related___NODE")
       slug: String!
       summary: String!
-      thumbnail: ContentfulAsset
+      thumbnail: ContentfulAsset @link(by: "id", from: "thumbnail___NODE"")
       url: String
     }
   `
