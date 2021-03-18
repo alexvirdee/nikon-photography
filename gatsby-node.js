@@ -14,7 +14,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       related: [ContentfulPortfolio] @link(by: "id", from: "related___NODE")
       slug: String!
       summary: String!
-      thumbnail: ContentfulAsset @link(by: "id", from: "thumbnail___NODE"")
+      thumbnail: ContentfulAsset @link(by: "id", from: "thumbnail___NODE")
       url: String
     }
   `
