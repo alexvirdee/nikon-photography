@@ -59,6 +59,6 @@ Run a production build into `./public`. The result is ready to be put on any sta
 
 After adding new content with contentful run this command to reflect changes on gh-pages branch
 
-If you are running into issues on gh-pages branch with images make sure to clean the .cache and public folder by running following command 
+If you are running into issues on gh-pages branch with images make sure to clean the .cache and public folder by running following command & then deploying to github pages
 
 ### 'npm run clean'
