@@ -69,7 +69,7 @@ export default props => {
           <Cards items={related} hideLastItemOnMobile={true} />
         </div>
       )}
-      <Newsletter />
+      {/* <Newsletter /> */}
     </Layout>
   )
 }

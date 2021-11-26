@@ -14,7 +14,7 @@ const ErrorPage = () => (
           </h1>
 
           <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-600 sm:text-2xl">
-            Page doesn't exists.
+            Page doesn't exist.
           </h2>
         </div>
       </div>
