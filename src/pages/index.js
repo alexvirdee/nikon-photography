@@ -10,7 +10,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SiteMetadata title="Home" description="Portfolio of Alex Virdee" />
-
       <Hero />
       <div className="bg-gray-100 py-12 lg:py-16">
         {data.portfolio && data.portfolio.nodes.length > 0 ? (

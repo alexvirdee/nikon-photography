@@ -8,7 +8,7 @@ const Hero = () => (
         📸
       </span>
       <br />
-      <span className="text-blue-600">
+      <span className="text-blue-400">
         Welcome to my photography website.
       </span>
     </h2>

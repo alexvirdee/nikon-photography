@@ -35,7 +35,7 @@ const Newsletter = () => {
       <form className="mt-8 sm:flex" onSubmit={handleSubmit}>
         <input
           aria-label="Email address"
-          className="appearance-none w-full sm:max-w-xs px-5 py-3 border border-gray-400 leading-snug rounded-md text-gray-900 bg-white placeholder-gray-600 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out"
+          className="appearance-none w-full sm:max-w-xs px-5 py-3 border border-gray-400 leading-snug rounded-md text-gray-900 bg-white placeholder-gray-600 focus:outline-none focus:ring focus:border-blue-300 transition duration-150 ease-in-out"
           onChange={event => setEmail(event.target.value)}
           placeholder="Enter your email"
           required

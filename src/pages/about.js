@@ -17,14 +17,13 @@ const AboutPage = ({ data }) => (
               About Me
             </h1>
 
-            <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-600 sm:text-2xl">
-              Miami based software developer & photography enthusiast.
+            <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-400 sm:text-2xl">
+              Fort Lauderdale based software developer & photography enthusiast.
             </h2>
             <div className="mt-4 leading-loose">
               Welcome to my photography website! I tend to travel quite often so I figured it would be a good idea to build a website that I can consistently add my favorite photographs that I take from my travels. Feel free to download & share <span role="img" aria-label="sunglass-emoji">😎</span>
-              <br />
-              <br />
-              <h2>My Gear:</h2>
+              <div className="mb-6"></div>
+              <div className="font-bold text-lg">My Gear:</div>
               <ul>
                 <li>Camera: Nikon D810</li>
                 <li>Telephoto: Tamron 70-200mm</li>
