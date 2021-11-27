@@ -37,7 +37,7 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
               variants={menuItem}
             >
               <Link
-                className="font-semibold text-4xl text-white"
+                className="font-semibold text-4xl text-white hover:text-blue-500"
                 activeClassName="text-blue-500"
                 to={link.to}
                 onClick={() => setIsOpen(false)}

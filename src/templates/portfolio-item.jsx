@@ -26,7 +26,7 @@ export default props => {
         description={summary}
         image={thumbnail.localFile.publicURL}
       />
-      <div className="bg-gray-0 py-12 lg:py-16">
+      <div className="bg-black py-12 lg:py-16">
         <div className="container">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-2/3 pb-8">
@@ -39,14 +39,14 @@ export default props => {
               {gallery && gallery.length > 1 && <Carousel images={gallery} />}
             </div>
             <div className="w-full lg:w-1/3 lg:pl-8 xl:pl-12">
-              <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-1">
+              <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-white sm:text-4xl mb-4">
                 {name}
               </h1>
               <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-600 sm:text-2xl">
                 {summary}
               </h2>
               {description && (
-                <div className="my-4 text-base text-gray-700 whitespace-pre-line">
+                <div className="my-4 text-base text-gray-100 whitespace-pre-line">
                   {description.description}
                 </div>
               )}
