@@ -1,4 +1,4 @@
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import React from "react"
 import Swiper from "react-id-swiper"
@@ -19,8 +19,9 @@ export const Carousel = ({ images }) => {
       {images.map(image => {
         return (
           <div className='carousel' key={`slide_${image.id}`}>
-            <Img
-              fluid={image.localFile.childImageSharp.fluid}
+            <GatsbyImage
+              placeholder={"blurred"}
+              image={image.gatsbyImageData}
               alt={image.title}
             />
           </div>

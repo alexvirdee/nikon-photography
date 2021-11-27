@@ -1,4 +1,4 @@
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
@@ -7,10 +7,10 @@ const Card = props => {
   const { name, slug, summary, thumbnail } = props
 
   return (
-    <div className="bg-white h-full shadow-sm rounded-md overflow-hidden group">
+    <div className="bg-white h-full shadow-sm rounded-md overflow-hidden group hover:border-white">
       <Link to={`/${slug}`}>
         <div className="group-hover:opacity-75 transition duration-150 ease-in-out">
-          <Img fluid={thumbnail.localFile.childImageSharp.fluid} alt={name} />
+          <GatsbyImage image={thumbnail.localFile.childImageSharp.gatsbyImageData} alt={name} />
         </div>
         <div className="p-4 sm:p-5">
           <h1 className="sm:text-lg text-gray-900 font-semibold">{name}</h1>
@@ -34,18 +34,16 @@ export default Card
 
 export const query = graphql`
   fragment PortfolioCard on ContentfulPortfolio {
-    id
-    name
-    slug
-    thumbnail {
-      localFile {
-        childImageSharp {
-          fluid(maxWidth: 444, maxHeight: 342, quality: 85) {
-            ...GatsbyImageSharpFluid_withWebp
+      id
+      name
+      slug
+      thumbnail {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED, width: 480, height: 342, placeholder: BLURRED)
           }
         }
       }
-    }
     summary
   }
 `

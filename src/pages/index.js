@@ -7,11 +7,12 @@ import Newsletter from "../components/Newsletter"
 import SiteMetadata from "../components/SiteMetadata"
 
 const IndexPage = ({ data }) => {
+  console.log("Data", data)
   return (
     <Layout>
       <SiteMetadata title="Home" description="Portfolio of Alex Virdee" />
       <Hero />
-      <div className="bg-gray-100 md:bg-black py-12 lg:py-16">
+      <div className="bg-black py-12 lg:py-16">
         {data.portfolio && data.portfolio.nodes.length > 0 ? (
           <Cards items={data.portfolio.nodes} />
         ) : (

@@ -1,4 +1,5 @@
 import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Img from "gatsby-image"
 import React from "react"
 import Layout from "../layouts/Layout"
@@ -9,18 +10,18 @@ const AboutPage = ({ data }) => (
   <Layout>
     <SiteMetadata title="About" description="Sample description" />
 
-    <div className="bg-gray-100">
+    <div className="bg-black">
       <div className="container py-12 lg:pb-16">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0">
-            <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-white sm:text-4xl mb-6">
               About Me
             </h1>
 
             <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-400 sm:text-2xl">
               Fort Lauderdale based software developer & photography enthusiast.
             </h2>
-            <div className="mt-4 leading-loose">
+            <div className="mt-4 leading-loose text-gray-200">
               Welcome to my photography website! I tend to travel quite often so I figured it would be a good idea to build a website that I can consistently add my favorite photographs that I take from my travels. Feel free to download & share <span role="img" aria-label="sunglass-emoji">😎</span>
               <div className="mb-6"></div>
               <div className="font-bold text-lg">My Gear:</div>
@@ -45,8 +46,8 @@ const AboutPage = ({ data }) => (
             </div>
           </div>
           <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
-            <Img
-              fluid={data.author.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.author.childImageSharp.gatsbyImageData}
               alt="Alex Virdee"
               className="rounded-md shadow-md"
             />
@@ -64,9 +65,7 @@ export const query = graphql`
   query {
     author: file(relativePath: { eq: "keys-about.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, maxHeight: 480, quality: 85) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(layout: CONSTRAINED, width: 600, height: 480, placeholder: BLURRED)
       }
     }
   }

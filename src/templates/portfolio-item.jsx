@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import SiteMetadata from "../components/SiteMetadata"
 import Button from "../components/Button"
@@ -31,8 +31,8 @@ export default props => {
           <div className="flex flex-wrap">
             <div className="w-full lg:w-2/3 pb-8">
               {gallery && gallery.length === 1 && (
-                <Img
-                  fluid={gallery[0].localFile.childImageSharp.fluid}
+                <GatsbyImage
+                  image={gallery[0].gatsbyImageData}
                   alt={name}
                 />
               )}
@@ -82,13 +82,7 @@ export const query = graphql`
       }
       gallery {
         id
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 960, quality: 85) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+        gatsbyImageData(width: 960, height: 650, placeholder: BLURRED)
         title
       }
       name
