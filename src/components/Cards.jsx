@@ -4,7 +4,6 @@ import React from "react"
 import Card from "./Card"
 
 const Cards = ({ items, hideLastItemOnMobile = false }) => {
-  console.log("items??? ", items)
   return (
     <div className="container">
       <div className="flex flex-wrap -mx-3 lg:-mx-6">

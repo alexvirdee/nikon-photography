@@ -7,7 +7,6 @@ import Newsletter from "../components/Newsletter"
 import SiteMetadata from "../components/SiteMetadata"
 
 const IndexPage = ({ data }) => {
-  console.log("Data", data)
   return (
     <Layout>
       <SiteMetadata title="Home" description="Portfolio of Alex Virdee" />
