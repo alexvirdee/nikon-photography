@@ -2,7 +2,6 @@ import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../layouts/Layout"
-import Newsletter from "../components/Newsletter"
 import SiteMetadata from "../components/SiteMetadata"
 
 const AboutPage = ({ data }) => (
@@ -54,7 +53,6 @@ const AboutPage = ({ data }) => (
         </div>
       </div>
     </div>
-    {/* <Newsletter /> */}
   </Layout>
 )
 

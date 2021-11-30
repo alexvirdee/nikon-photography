@@ -1,16 +1,17 @@
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
 const Card = props => {
   const { name, slug, summary, thumbnail } = props
-
+  const image = thumbnail.localFile.childImageSharp
+  const nikonImage = getImage(image)
   return (
     <div className="bg-white h-full shadow-sm rounded-md overflow-hidden group hover:border-white">
       <Link to={`/${slug}`}>
         <div className="group-hover:opacity-75 transition duration-150 ease-in-out">
-          <GatsbyImage image={thumbnail.localFile.childImageSharp.gatsbyImageData} alt={name} />
+          <GatsbyImage image={nikonImage} alt={name} />
         </div>
         <div className="p-4 sm:p-5">
           <h1 className="sm:text-lg text-gray-900 font-semibold">{name}</h1>
