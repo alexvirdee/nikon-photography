@@ -14,8 +14,8 @@ module.exports = {
   pathPrefix: "/nikon-photography",
   siteMetadata: {
     menu: [
-      { name: "Home", to: "/" },
-      { name: "Gallery", to: "/gallery" },
+      { name: "Albums", to: "/" },
+      { name: "Library", to: "/library" },
       { name: "About", to: "/about" },
       { name: "Software", to: "http://www.alexvirdee.com/"  },
       { name: "Blog", to: "https://alexvirdee-blog.netlify.app/" }
