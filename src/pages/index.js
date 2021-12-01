@@ -1,5 +1,5 @@
-import { graphql } from "gatsby"
 import React from "react"
+import { graphql } from "gatsby"
 import Cards from "../components/Cards"
 import Hero from "../components/Hero"
 import Layout from "../layouts/Layout"
