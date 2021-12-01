@@ -4,8 +4,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../layouts/Layout"
 
 const Library = ({ data }) => {
-  console.log("Data", data)
   const dataHld = data.allFiles.nodes
+
+  const slugs = data.allFiles.edges
+
+  console.log("Nodes", dataHld, "Slugs", slugs)
 
   const emptyQuery = ""
 
@@ -45,7 +48,8 @@ const Library = ({ data }) => {
 
   return (
     <Layout>
-      <div className="container bg-black py-12 lg:py-16">
+      <div className="bg-black">
+      <div className="container py-12 lg:py-16">
         <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0 lg:mx-12">
           <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-white sm:text-4xl mb-6">
             Library
@@ -66,7 +70,7 @@ const Library = ({ data }) => {
           {posts.map((item) => {
             return Object.entries(item).map(([key, value]) => {
               return value.map((image, index) => {
-                console.log(image)
+                // console.log(image)
                 const nikonImage = getImage(image)
                 const filteredImage = getImage(image[1])
                 return (
@@ -95,6 +99,7 @@ const Library = ({ data }) => {
             })
           })}
         </div>
+      </div>
       </div>
     </Layout>
   )

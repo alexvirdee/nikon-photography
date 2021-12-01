@@ -7,7 +7,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Inter var", "system-ui", "sans-serif"],
-    },
+    }
   },
   variants: {
     opacity: ["responsive", "hover", "focus", "group-hover"],
