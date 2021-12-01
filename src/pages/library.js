@@ -4,7 +4,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../layouts/Layout"
 
 const Library = ({ data }) => {
-  console.log(data)
   const dataHld = data.allFiles.nodes
 
   const emptyQuery = ""
@@ -17,33 +16,21 @@ const Library = ({ data }) => {
   const handleInputChange = (event) => {
     const query = event.target.value
 
-    console.log("Query", query)
-
     const posts = data.allFiles.nodes.map((item) => {
       return Object.entries(item).map(([key, value]) => {
-        console.log("Value ===> ", value)
         return value.map((image) => {
-          console.log("image", image)
           return image
         })
       })
     })
 
-    console.log("Log the post arrays", posts)
-
     const filteredData = posts.map((imageArr) => {
-      console.log("Image array", imageArr)
       return imageArr.map((item) => {
-        console.log("Item", item)
         return Object.entries(item).filter(([key, value]) => {
-          console.log("Value", value)
-          console.log("Description", value.description)
           return value.description.toLowerCase().includes(query.toLowerCase())
         })
       })
     })
-
-    console.log("filtered data", filteredData)
 
     setState({
       query,
@@ -76,19 +63,26 @@ const Library = ({ data }) => {
         </div>
         <div className="flex flex-wrap -mx-3 lg:mx-6">
           {posts.map((item) => {
-            console.log("This should be filtered", filteredData)
             return Object.entries(item).map(([key, value]) => {
               return value.map((image, index) => {
                 const nikonImage = getImage(image)
+                const filteredImage = getImage(image[1])
                 return (
                   <div
                     key={index}
                     className="w-full sm:w-1/2 lg:w-1/3 p-3 md:p-6"
                   >
                     <div className="bg-white h-full shadow-sm rounded-md overflow-hidden group hover:border-blue-600">
-                      <GatsbyImage image={nikonImage} alt={image.description} />
+                      <GatsbyImage
+                        image={!hasSearchResults ? nikonImage : filteredImage}
+                        alt={image.description}
+                      />
                       <div className="text-black text-center text-base px-2 py-4">
-                        {image.description ? image.description : "No Caption"}
+                        {!hasSearchResults
+                          ? image.description
+                          : hasSearchResults
+                          ? image[1].description
+                          : "No Caption"}
                       </div>
                     </div>
                   </div>
