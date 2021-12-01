@@ -45,7 +45,7 @@ const Header = () => {
           {site.data.menu.map((link, key) => (
             <Link
               key={`menu_desktop_link${key}`}
-              className="ml-6 sm:ml-8 text-sm sm:text-base font-medium px-px border-b-2 pb-2 border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-200 transition duration-150 ease-in-out"
+              className="ml-6 sm:ml-8 text-sm sm:text-base font-medium px-px border-b-2 pb-2 border-transparent text-gray-700 hover:text-gray-800 hover:border-blue-200 transition duration-150 ease-in-out"
               activeClassName="border-blue-600 text-gray-900 hover:border-blue-600"
               to={link.to}
             >
@@ -53,13 +53,13 @@ const Header = () => {
             </Link>
           ))}
           <a
-            className="ml-6 sm:ml-8 text-sm sm:text-base font-medium px-px border-b-2 pb-2 border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-200 transition duration-150 ease-in-out"
+            className="ml-6 sm:ml-8 text-sm sm:text-base font-medium px-px border-b-2 pb-2 border-transparent text-gray-700 hover:text-gray-800 hover:border-blue-200 transition duration-150 ease-in-out"
             href="http://www.alexvirdee.com/"
           >
             Portfolio
           </a>
           <a
-            className="ml-6 sm:ml-8 text-sm sm:text-base font-medium px-px border-b-2 pb-2 border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-200 transition duration-150 ease-in-out"
+            className="ml-6 sm:ml-8 text-sm sm:text-base font-medium px-px border-b-2 pb-2 border-transparent text-gray-700 hover:text-gray-800 hover:border-blue-200 transition duration-150 ease-in-out"
             href="https://alexvirdee-blog.netlify.app/"
           >
             Blog
