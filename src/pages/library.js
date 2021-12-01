@@ -84,7 +84,7 @@ const Library = ({ data }) => {
                         image={!hasSearchResults ? nikonImage : filteredImage}
                         alt={image.description}
                       />
-                      <div className="text-black text-center text-base px-2 py-4">
+                      <div className="text-black text-center text-base font-roboto px-2 py-4">
                         {!hasSearchResults
                           ? image.description
                           : hasSearchResults

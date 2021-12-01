@@ -7,6 +7,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Inter var", "system-ui", "sans-serif"],
+      roboto: ["roboto", "sans-serif"]
     }
   },
   variants: {
