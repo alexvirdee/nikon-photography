@@ -54,14 +54,12 @@ const Header = () => {
           ))}
           <a
             className="ml-6 sm:ml-8 text-sm sm:text-base font-medium px-px border-b-2 pb-2 border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-200 transition duration-150 ease-in-out"
-            activeClassName="border-blue-600 text-gray-900 hover:border-blue-600"
             href="http://www.alexvirdee.com/"
           >
             Portfolio
           </a>
           <a
             className="ml-6 sm:ml-8 text-sm sm:text-base font-medium px-px border-b-2 pb-2 border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-200 transition duration-150 ease-in-out"
-            activeClassName="border-blue-600 text-gray-900 hover:border-blue-600"
             href="https://alexvirdee-blog.netlify.app/"
           >
             Blog
