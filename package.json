@@ -21,7 +21,6 @@
     "framer-motion": "^4.1.16",
     "gatsby": "^4.2.0",
     "gatsby-plugin-image": "^2.2.0",
-    "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^4.2.0",
     "gatsby-plugin-postcss": "^5.2.0",
     "gatsby-plugin-react-helmet": "^5.2.0",
