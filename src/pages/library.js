@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../layouts/Layout"
 
 const Library = ({ data }) => {
+  console.log("Data", data)
   const dataHld = data.allFiles.nodes
 
   const emptyQuery = ""
@@ -65,6 +66,7 @@ const Library = ({ data }) => {
           {posts.map((item) => {
             return Object.entries(item).map(([key, value]) => {
               return value.map((image, index) => {
+                console.log(image)
                 const nikonImage = getImage(image)
                 const filteredImage = getImage(image[1])
                 return (
@@ -72,7 +74,8 @@ const Library = ({ data }) => {
                     key={index}
                     className="w-full sm:w-1/2 lg:w-1/3 p-3 md:p-6"
                   >
-                    <div className="bg-white h-full shadow-sm rounded-md overflow-hidden group hover:border-blue-600">
+                    <div className="bg-white h-full shadow-sm rounded-md overflow-hidden group">
+                      {/* <Link to={`/${slug}`}> */}
                       <GatsbyImage
                         image={!hasSearchResults ? nikonImage : filteredImage}
                         alt={image.description}
@@ -84,6 +87,7 @@ const Library = ({ data }) => {
                           ? image[1].description
                           : "No Caption"}
                       </div>
+                      {/* </Link> */}
                     </div>
                   </div>
                 )
@@ -101,6 +105,11 @@ export default Library
 export const query = graphql`
   query LibraryQuery {
     allFiles: allContentfulPortfolio(sort: { fields: gallery___title }) {
+      edges {
+        node {
+          slug
+        }
+      }
       nodes {
         gallery {
           gatsbyImageData(
