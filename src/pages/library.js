@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout"
 
 const Library = ({ data }) => {
   console.log(data)
-  let dataHld = data;
+  const dataHld = data.allFiles.nodes
 
   const emptyQuery = ""
 
@@ -17,28 +17,27 @@ const Library = ({ data }) => {
   const handleInputChange = (event) => {
     const query = event.target.value
 
-    console.log("Query", query);
+    console.log("Query", query)
 
-    const images = data.allFiles.nodes.map((item) => {
+    const posts = data.allFiles.nodes.map((item) => {
       return Object.entries(item).map(([key, value]) => {
+        console.log("Value ===> ", value)
         return value.map((image) => {
+          console.log("image", image)
           return image
         })
       })
     })
 
-    console.log("Log the post arrays", images)
+    console.log("Log the post arrays", posts)
 
-    const filteredData = images.forEach((imageArr) => {
+    const filteredData = posts.map((imageArr) => {
       console.log("Image array", imageArr)
-      imageArr.forEach((item) => {
+      return imageArr.map((item) => {
         console.log("Item", item)
-        Object.entries(item).filter(([key, value]) => {
+        return Object.entries(item).filter(([key, value]) => {
           console.log("Value", value)
           console.log("Description", value.description)
-          let match = value.description.toLowerCase().includes(query.toLowerCase())
-          console.log("match", match)
-          return match
           return value.description.toLowerCase().includes(query.toLowerCase())
         })
       })
@@ -54,8 +53,7 @@ const Library = ({ data }) => {
 
   const { filteredData, query } = state
   const hasSearchResults = filteredData && query !== emptyQuery
-
-  dataHld = hasSearchResults ? filteredData : dataHld
+  const posts = hasSearchResults ? filteredData : dataHld
 
   return (
     <Layout>
@@ -77,7 +75,8 @@ const Library = ({ data }) => {
           </div>
         </div>
         <div className="flex flex-wrap -mx-3 lg:mx-6">
-          {dataHld.allFiles.nodes.map((item) => {
+          {posts.map((item) => {
+            console.log("This should be filtered", filteredData)
             return Object.entries(item).map(([key, value]) => {
               return value.map((image, index) => {
                 const nikonImage = getImage(image)
@@ -107,7 +106,7 @@ export default Library
 
 export const query = graphql`
   query LibraryQuery {
-    allFiles: allContentfulPortfolio(sort: {fields: gallery___title}) {
+    allFiles: allContentfulPortfolio(sort: { fields: gallery___title }) {
       nodes {
         gallery {
           gatsbyImageData(
