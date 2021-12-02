@@ -13,7 +13,7 @@ const menuItem = {
     },
     x: -20,
   },
-  open: key => ({
+  open: (key) => ({
     opacity: 1,
     transition: {
       delay: 0.25 + key * 0.1,
@@ -46,6 +46,18 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
               </Link>
             </motion.li>
           ))}
+          <a
+            className="font-semibold text-4xl text-white hover:text-blue-500"
+            href="http://www.alexvirdee.com/"
+          >
+            Portfolio
+          </a>
+          <a
+            className="font-semibold text-4xl text-white hover:text-blue-500"
+            href="https://alexvirdee-blog.netlify.app/"
+          >
+            Blog
+          </a>
         </ul>
       </div>
     </Overlay>
