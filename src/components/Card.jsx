@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Card = props => {
+const Card = (props) => {
   const { name, slug, summary, thumbnail } = props
   const image = thumbnail.localFile.childImageSharp
   const nikonImage = getImage(image)
@@ -35,16 +35,21 @@ export default Card
 
 export const query = graphql`
   fragment PortfolioCard on ContentfulPortfolio {
-      id
-      name
-      slug
-      thumbnail {
-        localFile {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, width: 480, height: 342, placeholder: BLURRED)
-          }
+    id
+    name
+    slug
+    thumbnail {
+      localFile {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            width: 480
+            height: 342
+            placeholder: BLURRED
+          )
         }
       }
+    }
     summary
   }
 `

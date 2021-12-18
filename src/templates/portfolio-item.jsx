@@ -7,16 +7,9 @@ import Cards from "../components/Cards"
 import Carousel from "../components/Carousel"
 import Layout from "../layouts/Layout"
 
-export default props => {
-  const {
-    description,
-    gallery,
-    name,
-    related,
-    summary,
-    thumbnail,
-    url,
-  } = props.data.item
+const PortfolioItem = (props) => {
+  const { description, gallery, name, related, summary, thumbnail, url } =
+    props.data.item
 
   return (
     <Layout>
@@ -30,10 +23,7 @@ export default props => {
           <div className="flex flex-wrap">
             <div className="w-full lg:w-2/3 pb-8">
               {gallery && gallery.length === 1 && (
-                <GatsbyImage
-                  image={gallery[0].gatsbyImageData}
-                  alt={name}
-                />
+                <GatsbyImage image={gallery[0].gatsbyImageData} alt={name} />
               )}
               {gallery && gallery.length > 1 && <Carousel images={gallery} />}
             </div>
@@ -71,6 +61,8 @@ export default props => {
     </Layout>
   )
 }
+
+export default PortfolioItem
 
 export const query = graphql`
   query PortfolioItemQUery($slug: String!) {
