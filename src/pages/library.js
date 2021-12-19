@@ -17,6 +17,7 @@ const Library = ({ data }) => {
 
     const posts = data.allFiles.nodes.map((item) => {
       return Object.entries(item).map(([key, value]) => {
+        console.log("Does this log to the console????")
         return value.map((image) => {
           return image
         })

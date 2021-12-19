@@ -46,18 +46,22 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
               </Link>
             </motion.li>
           ))}
-          <a
-            className="font-semibold text-4xl text-white hover:text-blue-500"
-            href="http://www.alexvirdee.com/"
-          >
-            Portfolio
-          </a>
-          <a
-            className="font-semibold text-4xl text-white hover:text-blue-500"
-            href="https://alexvirdee-blog.netlify.app/"
-          >
-            Blog
-          </a>
+          <div className="my-3">
+            <a
+              className="font-semibold text-4xl text-white hover:text-blue-500"
+              href="http://www.alexvirdee.com/"
+            >
+              Portfolio
+            </a>
+          </div>
+          <div className="my-3">
+            <a
+              className="font-semibold text-4xl text-white hover:text-blue-500"
+              href="https://alexvirdee-blog.netlify.app/"
+            >
+              Blog
+            </a>
+          </div>
         </ul>
       </div>
     </Overlay>
