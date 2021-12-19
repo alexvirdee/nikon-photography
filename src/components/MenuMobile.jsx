@@ -30,7 +30,7 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
         <ul className="text-center">
           {links.map((link, key) => (
             <motion.li
-              className="my-3"
+              className="my-4"
               animate={isOpen ? "open" : "closed"}
               custom={key}
               key={`menu_mobile_link${key}`}
@@ -46,7 +46,7 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
               </Link>
             </motion.li>
           ))}
-          <div className="my-3">
+          <div className="my-4">
             <a
               className="font-semibold text-4xl text-white hover:text-blue-500"
               href="http://www.alexvirdee.com/"
@@ -54,7 +54,7 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
               Portfolio
             </a>
           </div>
-          <div className="my-3">
+          <div className="my-4">
             <a
               className="font-semibold text-4xl text-white hover:text-blue-500"
               href="https://alexvirdee-blog.netlify.app/"
