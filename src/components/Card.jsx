@@ -5,7 +5,7 @@ import React from "react"
 
 const Card = (props) => {
   const { name, slug, summary, thumbnail } = props
-  const image = thumbnail.localFile.childImageSharp
+  const image = thumbnail?.localFile?.childImageSharp
   const nikonImage = getImage(image)
   return (
     <div className="bg-white h-full shadow-sm rounded-md overflow-hidden group hover:border-white">
