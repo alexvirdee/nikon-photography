@@ -55,10 +55,16 @@ Get current state of project from contentful before pushing to gh-pages branch.
 
 Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
 
-#### `npm run deploy`
+#### Deployed on Netlify
 
-After adding new content with contentful run this command to reflect changes on gh-pages branch
+#### Steps to create a new build
 
-If you are running into issues on gh-pages branch with images make sure to clean the .cache and public folder by running following command & then deploying to github pages
+1. Push new code to github branch
+2. Checkout `Prod` branch
+3. `git fetch`
+4. `git rebase origin/main`
+5. `git push`
+
+Pushing to prod will create a new build on Netlify.
 
 ### 'npm run clean'
