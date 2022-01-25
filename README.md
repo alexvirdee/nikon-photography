@@ -66,5 +66,3 @@ Run a production build into `./public`. The result is ready to be put on any sta
 5. `git push`
 
 Pushing to prod will create a new build on Netlify.
-
-### 'npm run clean'
