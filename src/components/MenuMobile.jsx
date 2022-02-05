@@ -24,6 +24,7 @@ const menuItem = {
 }
 
 const MenuMobile = ({ links, isOpen, setIsOpen }) => {
+  console.log("Links", links)
   return (
     <Overlay isOpen={isOpen} setIsOpen={setIsOpen}>
       <div className="container flex flex-col justify-center">

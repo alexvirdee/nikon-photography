@@ -5,7 +5,8 @@ import { FaTimes } from "react-icons/fa"
 
 const backgroundVariants = {
   closed: {
-    opacity: 0,
+    opacity: 1,
+    duration: 0.2,
     transitionEnd: { display: "none" },
   },
   open: {
@@ -60,13 +61,13 @@ function Overlay({ children, isOpen, setIsOpen }) {
   useEffect(() => {
     document
       .querySelectorAll("body, html")
-      .forEach(e => e.classList[isOpen ? "add" : "remove"]("overflow-hidden"))
+      .forEach((e) => e.classList[isOpen ? "add" : "remove"]("overflow-hidden"))
   }, [isOpen])
 
   return (
     <motion.div
       animate={isOpen ? "open" : "closed"}
-      className="fixed z-50 block bg-gray-900 text-white"
+      className="fixed z-50 block bg-black text-white"
       initial="closed"
       variants={backgroundVariants}
     >
